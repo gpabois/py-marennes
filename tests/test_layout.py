@@ -1,19 +1,25 @@
 import pytest
 
-from pymarennes.skeleton import fib, main
+from pymarennes import html as H
+from pymarennes import layout as L
+from pymarennes import style as S
 
 __author__ = "G. PABOIS"
 __copyright__ = "G. PABOIS"
 __license__ = "MIT"
 
-
-def test_fib():
-    """API Tests"""
-    assert fib(1) == 1
-    assert fib(2) == 1
-    assert fib(7) == 13
-    with pytest.raises(AssertionError):
-        fib(-10)
+def test_anonymous_block_boxes():
+    sheet = S.StyleSheet(
+        [
+            S.Rule([])
+        ]
+    )
+    html = H.e("div", {}, [
+        "Some text",
+        h.e("p", {}, ["More text"])
+    ])
+    
+    
 
 
 def test_main(capsys):
