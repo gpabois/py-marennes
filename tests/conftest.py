@@ -1,5 +1,5 @@
 """
-    Dummy conftest.py for pymarennes.
+    Dummy conftest.py for py-marennes.
 
     If you don't know what this is for, just leave it empty.
     Read more about conftest.py under:
